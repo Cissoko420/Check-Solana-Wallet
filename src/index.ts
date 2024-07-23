@@ -6,10 +6,10 @@ try {
   const address = new PublicKey(wallet)
 
   if (PublicKey.isOnCurve(address.toBuffer())) {
-    console.log('Valid Solana Address')
+    console.log(PublicKey.isOnCurve(address))
   } else {
-    throw new Error('Invalid Solana Address')
+    console.log(false)
   }
 } catch (error) {
-  console.log('Invalid Solana Address')
+  console.log(false)
 }
